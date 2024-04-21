@@ -1,4 +1,4 @@
-// File: /Users/aaronjustinmacias/Documents/Programming/fullstack/new/motionbot/front-end/app/motion/page.jsx
+// File: C:\Users\Aaron\Documents\Programming\personal\1\motionbot\front-end\app\motion\page.jsx
 import * as entry from '../../../../app/motion/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
