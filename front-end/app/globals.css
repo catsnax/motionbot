@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: rgb(240, 237, 237)
+}
+
+h1,h2,h3{
+    @apply font-bold text-primary text-lg
+}
+
+.card{
+    @apply
+    bg-white
+    shadow-sm
+    rounded-md
+    px-3 px-4 my-4
+    relative
+    overflow-hidden
+
+}
+
+nav{
+    @apply flex gap-10 h-24 mt-20 ml-8 text-gray-500 font-medium
+}
+
