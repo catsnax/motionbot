@@ -25,3 +25,7 @@ nav{
     @apply flex gap-10 h-24 mt-20 ml-8 text-gray-500 font-medium
 }
 
+.inputBox{
+    @apply h-10  border-gray-400 rounded-lg
+}
+
