@@ -45,7 +45,7 @@ export default function page() {
   return (
     <main className = "">
         <form className = "border-solid flex   flex-col ml-52 gap-6 justify-center align-center h-screen rounded-md border-2 w-9/12" onSubmit = {handleSubmit}>
-            <h1 className = "m-8 text-xl"> Create Your Account</h1>
+            <h1 className = "m-8 text-xl"> Create Admin Account</h1>
 
             <div>
               <h5 className = "text-md"> Username</h5>
@@ -67,9 +67,6 @@ export default function page() {
             </div>
             <button className = "w-6/12 bg-primary text-white h-10 rounded-lg"> Sign Up</button>
         </form>
-
-
-
 
     </main>
   )

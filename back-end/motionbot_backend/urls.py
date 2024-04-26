@@ -19,5 +19,6 @@ from django.urls import path
 from motionbot_backend import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', views.account_list)
+    path('accounts/', views.account_list),
+    path('motions/', views.motion_action)
 ]

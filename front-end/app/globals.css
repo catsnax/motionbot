@@ -26,6 +26,6 @@ nav{
 }
 
 .inputBox{
-    @apply h-10  border-gray-400 rounded-lg
+    @apply p-2 border-gray-400 rounded-lg
 }
 

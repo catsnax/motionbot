@@ -12,7 +12,7 @@ export default function Navbar() {
           quality = {100}
           />
 
-          <h1> motionbot</h1>
+          <h1> motionbot.</h1>
           
           <Link href = "/"> Dashboard</Link>
           <Link href = "/motion"> Motions</Link>
