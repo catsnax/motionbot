@@ -12,10 +12,12 @@ export default function Navbar() {
           quality = {100}
           />
 
-          <h1> motionbot.</h1>
+          <Link href = "/"><h1> motionbot.</h1></Link>
           
-          <Link href = "/"> Dashboard</Link>
-          <Link href = "/motion"> Motions</Link>
+          <Link href = "/motion/add"> Add</Link>
+          <Link href = "/motion/generate"> Random</Link>
+
+          
     </nav>
   )
 }

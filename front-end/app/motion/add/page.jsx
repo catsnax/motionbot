@@ -36,9 +36,9 @@ export default function add() {
   return (
     <main>
 
-<main className = "">
-        <form className = "border-solid flex flex-col gap-6 ml-52 items-center h-auto rounded-md border-2 w-8/12" action = {handleSubmit}>
-            <div className = "flex flex-col gap-6  w-7/12 mt-10 ">
+<main className = "flex justify-center">
+        <form className = "border-solid flex flex-col items-center h-auto rounded-md border-2 w-8/12" action = {handleSubmit}>
+            <div className = "flex flex-col gap-2  w-7/12 mt-10 ">
             <h1 className = "m-1 text-xl self-center"> Add A Motion</h1>
 
             <div>
@@ -54,14 +54,18 @@ export default function add() {
                 <h5> Motion Theme</h5>
                 <select className = "inputBox w-full" name = "motionTheme"  >
                 <option> Feminism</option>
+                <option> Relationships</option>
                 <option> International Relations</option>
                 <option> Economics</option>
+                <option> Politics</option>
                 <option> Media</option>
                 <option> LGBTQ+</option>
                 <option> Environment</option>
                 <option> Philosophy</option>
                 <option> Education</option>
                 <option> Technology</option>
+                <option> Religion</option>
+                <option> Narratives</option>
                 </select>
               </dix>
               <div className = "w-1/2">

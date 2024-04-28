@@ -43,19 +43,19 @@ export default function page() {
 
 
   return (
-    <main className = "">
-        <form className = "border-solid flex   flex-col ml-52 gap-6 justify-center align-center h-screen rounded-md border-2 w-9/12" onSubmit = {handleSubmit}>
-            <h1 className = "m-8 text-xl"> Create Admin Account</h1>
-
-            <div>
+    <main className = "flex justify-center ">
+        <form className = "border-solid flex justify-center h-auto rounded-md border-2 w-10/12" onSubmit = {handleSubmit}>
+          <div className = "flex flex-col items-center gap-6 w-full mt-10 ">
+            <h1 className = "m-8 text-xl self-center"> Create Admin Account</h1>
+            <div className = "self-center w-1/2 ml-64">
               <h5 className = "text-md"> Username</h5>
               <input className = "inputBox w-6/12" name = "username" onChange = {handleChange} value = {formData.username}></input>
             </div>
-            <div>
+            <div className = "self-center w-1/2 ml-64 ">
             <h5 className = ""> Email Address</h5>
             <input className = "inputBox w-6/12" name = "email_address" onChange = {handleChange} value = {formData.email_address}></input>
             </div>
-            <div className = "flex gap-2">
+            <div className = "flex gap-2 self-center w-1/2 ml-64">
               <dix className = "w-3/12">
                 <h5> Password</h5>
                 <input type = "password" className = "inputBox w-10/12" name = "password" onChange = {handleChange} value = {formData.password}></input>
@@ -66,6 +66,7 @@ export default function page() {
               </div>
             </div>
             <button className = "w-6/12 bg-primary text-white h-10 rounded-lg"> Sign Up</button>
+          </div>
         </form>
 
     </main>

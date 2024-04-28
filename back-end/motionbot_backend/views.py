@@ -33,12 +33,11 @@ def motion_action(request):
             print(serializer.errors )
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     if request.method == 'PUT':
-        #print(request.data)
-        if(request.data['motionTheme'] == 'Any' and request.data['motionDifficulty'] == 'N/A'):
+        if(request.data['motionTheme'] == 'Any' and request.data['motionDifficulty'] == 'Any'):
             motion = Motions.objects.all()
-        elif(request.data['motionTheme'] == 'Any' and request.data['motionDifficulty'] != 'N/A'):
+        elif(request.data['motionTheme'] == 'Any' and request.data['motionDifficulty'] != 'Any'):
             motion = Motions.objects.filter(motionDifficulty = request.data['motionDifficulty'])
-        elif(request.data['motionDifficulty'] == 'N/A' and request.data['motionTheme'] != 'Any'):
+        elif(request.data['motionDifficulty'] == 'Any' and request.data['motionTheme'] != 'Any'):
             motion = Motions.objects.filter(motionTheme = request.data['motionTheme'])
         else:
             motion = Motions.objects.filter(motionTheme = request.data['motionTheme'], motionDifficulty = request.data['motionDifficulty'])
@@ -47,10 +46,18 @@ def motion_action(request):
         #   print(hello.motionName)
 
         serializer = MotionSerializer(motion, many = True)
-        randomMotion = random.choice(serializer.data)
+        if(len(serializer.data) != 0 and request.data['motionFormat'] == 'Asian Parliamentary'):
+            randomMotion = random.sample(serializer.data, k = 3)
+        elif(len(serializer.data) != 0 and request.data['motionFormat'] == 'British Parliamentary'):
+            randomMotion = random.choice(serializer.data)
+        else:
+            randomMotion = ""
+
+        
         print(randomMotion)
 
         return JsonResponse(randomMotion, safe = False)
+        #return JsonResponse('', safe = False)
         
         
 

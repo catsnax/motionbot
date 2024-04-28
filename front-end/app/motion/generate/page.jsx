@@ -20,59 +20,117 @@ async function fetchMotion(data) {
 
  
   
-
-
 export default function generate() {
   async function handleGenerate (formData) {
  
     const rawFormData = {
       motionTheme: formData.get('motionTheme'),
       motionDifficulty: formData.get('motionDifficulty'),
+      motionFormat: formData.get('motionFormat')
     }
-    //console.log(JSON.stringify(rawFormData))
-    fetchMotion(rawFormData)
+    setMotionFormat(rawFormData.motionFormat)
+    fetchMotion(rawFormData).then((response) => {
+        if (response){
+            if(rawFormData.motionFormat == 'British Parliamentary'){
+                console.log(response)
+                setMotionName(response.motionName)
+                setMotionInfoSlide(response.infoSlide)
+            }
+            else if (rawFormData.motionFormat == 'Asian Parliamentary'){
+                console.log(response)
+                setMotionAsian(response)
+        
+
+            }
+            
+           
+        }
+        else{
+            setMotionName("")
+            setMotionInfoSlide("")
+        }
+    })
   }
 
 
-  const [motionTheme, setMotionTheme] = useState('')
-  const [motionDifficulty, setMotionDifficulty] = useState('')
+  const [motionName, setMotionName] = useState('')
+  const [motionInfoSlide, setMotionInfoSlide] = useState('')
+  const [motionFormat, setMotionFormat] = useState('')
+  const [motionAsian, setMotionAsian] = useState([])
 
   return (
     <main>
 
-<main className = "">
-        <form className = "border-solid flex flex-col gap-6 ml-52 items-center h-auto rounded-md border-2 w-8/12" action = {handleGenerate}>
+<main className = "flex justify-center">
+        <form className = "border-solid flex flex-col gap-3 items-center h-auto rounded-md border-2 w-9/12" action = {handleGenerate}>
             <div className = "flex flex-col gap-6  w-7/12 mt-10 ">
-            <h1 className = "m-1 text-xl self-center"> Generate Motion</h1>
+            <h1 className = "m-1 text-xl self-center"> Motion Generator</h1>
 
-            <div>
-            <h5 className = ""> Infoslide</h5>
-            </div>
+            {motionFormat == 'British Parliamentary' ?  <>
+            {motionInfoSlide != "" ? <div><h5 className = "text-md font-semibold"> Infoslide</h5> <div className = "text-justify"> {motionInfoSlide}</div> </div> : <></>}
+            {motionName != "" ? <div><h5 className = "text-md font-semibold"> Motion</h5> <div className = "text-justify"> {motionName}</div> </div> : <></>} </>
+            :<>
+            {(motionAsian.length != []) ? <> 
             
-            <div>
-              <h5 className = "text-md"> Motion </h5>
-            </div>
+            <h4 className = "text-md font-semibold"> Infoslide</h4> 
+            {motionAsian.map((motion, index) => {
+                if(motion.infoSlide != ""){
+                    return <span className = "text-justify" key = {motion}> Motion {index + 1}: {motion.infoSlide} </span>
+                }
+            })
+            }
+            <h4 className = "text-md font-semibold"> Motion</h4>
+            {motionAsian.map((motion, index) => {
+                return <div key = {motion} className = "text-justify"> Motion {index + 1}: {motion.motionName}</div>
+            })
+            }
+
+
+
+            </> : <></>}
+           
+            
+
+            
+            
+            </>}
+
+
             
             <div className = "flex  gap-2 ">
-              <dix className = "w-1/2 border">
-                <h5> Motion Theme</h5>
+
+            <div className = "w-5/12">
+                <h5> Format</h5>
+                <select className = "inputBox w-full" name = "motionFormat">
+                    <option> British Parliamentary</option>
+                    <option> Asian Parliamentary</option>
+                
+                </select>
+              </div>
+                
+              <dix className = "w-6/12">
+                <h5> Theme</h5>
                 <select className = "inputBox w-full" name = "motionTheme">
                 <option> Any</option>
                 <option> Feminism</option>
+                <option> Relationships</option>
                 <option> International Relations</option>
                 <option> Economics</option>
+                <option> Politics</option>
                 <option> Media</option>
                 <option> LGBTQ+</option>
                 <option> Environment</option>
                 <option> Philosophy</option>
                 <option> Education</option>
                 <option> Technology</option>
+                <option> Religion</option>
+                <option> Narratives</option>
                 </select>
               </dix>
-              <div className = "w-1/2">
-                <h5> Motion Difficulty</h5>
+              <div className = "w-1/3">
+                <h5> Difficulty</h5>
                 <select className = "inputBox w-full" name = "motionDifficulty">
-                    <option> N/A</option>
+                    <option> Any</option>
                     <option> Easy</option>
                     <option> Average</option>
                     <option> Difficult</option>
