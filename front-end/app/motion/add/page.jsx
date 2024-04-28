@@ -18,22 +18,19 @@ async function createMotion(data) {
     return response.json(); 
   }
 
- 
-  
-
 
 export default function add() {
   async function handleSubmit (formData) {
     'use server'
  
     const rawFormData = {
-      motion: formData.get('motion'),
+      motionName: formData.get('motion'),
       infoSlide: formData.get('infoSlide'),
       motionTheme: formData.get('motionTheme'),
       motionDifficulty: formData.get('motionDifficulty'),
     }
     //console.log(JSON.stringify(rawFormData))
-    createMotion(JSON.stringify(rawFormData))
+    createMotion(rawFormData)
  
   }
   return (

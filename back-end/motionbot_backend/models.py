@@ -1,8 +1,8 @@
 from django.db import models
 
 class Motions(models.Model):
-    motion = models.CharField(max_length = 200)
-    infoSlide = models.CharField(max_length = 200)
+    motionName = models.CharField(max_length = 200)
+    infoSlide = models.CharField(max_length = 200, default = None, blank = True)
     motionTheme = models.CharField(max_length = 200)
     motionDifficulty = models.CharField(max_length = 200)
     #motionOwner = models.ForeignKey('Accounts', on_delete = models.CASCADE, default = None, null = True, blank = True)

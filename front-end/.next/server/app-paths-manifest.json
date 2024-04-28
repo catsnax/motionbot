@@ -1,5 +1,5 @@
 {
   "/motion/add/page": "app/motion/add/page.js",
-  "/signup/page": "app/signup/page.js",
-  "/motion/page": "app/motion/page.js"
+  "/page": "app/page.js",
+  "/motion/generate/page": "app/motion/generate/page.js"
 }

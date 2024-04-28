@@ -10,6 +10,6 @@ class AccountSerializer(serializers.ModelSerializer):
 class MotionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Motions
-        fields = ['id','motion', 'infoSlide', 'motionTheme', 'motionDifficulty']
+        fields = ['id','motionName', 'infoSlide', 'motionTheme', 'motionDifficulty']
 
         
