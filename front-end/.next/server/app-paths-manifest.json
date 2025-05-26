@@ -1,7 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/training/game/page": "app/training/game/page.js",
-  "/motion/generate/page": "app/motion/generate/page.js",
   "/motion/add/page": "app/motion/add/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/motion/generate/page": "app/motion/generate/page.js",
+  "/page": "app/page.js"
 }
