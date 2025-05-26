@@ -80,12 +80,12 @@ export default function generate() {
 
   return (
     <>
-      <main className="flex border border-red-900 w-[100vw] lg:w-screen justify-center">
+      <main className="flex w-[100vw] lg:w-screen justify-center">
         <form
           className="border-solid flex flex-col gap-3 items-center rounded-md border-2 w-screen"
           action={handleGenerate}
         >
-          <div className="flex flex-col gap-6 border border-red-500  w-8/12 mt-4 ">
+          <div className="flex flex-col gap-6  w-8/12 mt-4 ">
             <h1 className="m-1 text-xl self-center"> Motion Generator</h1>
             {motionFormat == "British Parliamentary" ? (
               <>
