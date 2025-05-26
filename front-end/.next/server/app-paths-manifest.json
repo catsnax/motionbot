@@ -1,4 +1,5 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/training/game/page": "app/training/game/page.js",
   "/motion/add/page": "app/motion/add/page.js",
   "/motion/generate/page": "app/motion/generate/page.js",

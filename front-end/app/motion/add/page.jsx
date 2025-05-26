@@ -34,10 +34,10 @@ export default function add() {
  
   }
   return (
-    <main>
+    <>
 
 <main className = "flex justify-center">
-        <form className = "border-solid flex flex-col items-center h-auto rounded-md border-2 w-8/12" action = {handleSubmit}>
+        <form className = "border-solid flex flex-col items-center h-auto rounded-md border-2 w-screen" action = {handleSubmit}>
             <div className = "flex flex-col gap-2  w-7/12 mt-10 ">
             <h1 className = "m-1 text-xl self-center"> Add A Motion</h1>
 
@@ -49,8 +49,7 @@ export default function add() {
             <h5 className = ""> Infoslide (Optional)</h5>
             <textarea className = "inputBox w-full"  name = "infoSlide" type = "text"></textarea>
             </div>
-            <div className = "flex  gap-2 ">
-              <dix className = "w-1/2 border">
+              <dix className = "">
                 <h5> Motion Theme</h5>
                 <select className = "inputBox w-full" name = "motionTheme"  >
                 <option> Feminism</option>
@@ -68,7 +67,7 @@ export default function add() {
                 <option> Narratives</option>
                 </select>
               </dix>
-              <div className = "w-1/2">
+              <div className = "">
                 <h5> Motion Difficulty</h5>
                 <select className = "inputBox w-full" name = "motionDifficulty">
                     <option> N/A</option>
@@ -77,8 +76,7 @@ export default function add() {
                     <option> Difficult</option>
                 </select>
               </div>
-            </div>
-            <button className = "w-full bg-primary text-white h-10 rounded-lg self-center"> Add Motion</button>
+            <button className = "w-full bg-primary text-white h-10 rounded-lg self-center mt-2"> Add Motion</button>
             </div>
         </form>
         
@@ -86,6 +84,6 @@ export default function add() {
     </main>
 
         
-    </main>
+    </>
   )
 }
