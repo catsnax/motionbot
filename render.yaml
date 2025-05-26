@@ -2,7 +2,7 @@ services:
   - type: web
     name: django-backend
     env: python
-    buildCommand: "./build.sh"
+    buildCommand: "./backend/build.sh"
     startCommand: "gunicorn motionbot_backend.wsgi:application"
     envVars:
       - key: DATABASE_URL
