@@ -3,7 +3,7 @@ import React from 'react'
 
 async function createMotion(data) {
     console.log(data)
-    const response = await fetch("http://127.0.0.1:8000/motions/", {
+    const response = await fetch("https://motionbot.onrender.com/motions/", {
       method: "POST",
       mode: "cors",
       cache: "no-cache",

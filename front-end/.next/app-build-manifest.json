@@ -16,15 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/training/game/page.js"
     ],
+    "/motion/add/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/motion/add/page.js"
+    ],
     "/motion/generate/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/motion/generate/page.js"
     ],
-    "/motion/add/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/motion/add/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

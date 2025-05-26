@@ -12,7 +12,7 @@ import {
 
 async function fetchMotion(data) {
   console.log(data);
-  const response = await fetch("http://127.0.0.1:8000/motions/", {
+  const response = await fetch("https://motionbot.onrender.com/motions/", {
     method: "PUT",
     mode: "cors",
     cache: "no-cache",
@@ -56,8 +56,8 @@ export default function generate() {
     } else {
       fetchMotion(rawFormData).then((response) => {
         if (response) {
+          console.log(response);
           if (rawFormData.motionFormat == "British Parliamentary") {
-            console.log(response);
             setMotionName(response.motionName);
             setMotionInfoSlide(response.infoSlide);
           } else if (rawFormData.motionFormat == "Asian Parliamentary") {
@@ -79,13 +79,13 @@ export default function generate() {
   const [motionDatabase, setMotionDatabase] = useState("");
 
   return (
-    <main>
-      <main className="flex justify-center">
+    <>
+      <main className="flex border border-red-900 w-[100vw] lg:w-screen justify-center">
         <form
-          className="border-solid flex flex-col gap-3 items-center h-auto rounded-md border-2 w-10/12"
+          className="border-solid flex flex-col gap-3 items-center rounded-md border-2 w-screen"
           action={handleGenerate}
         >
-          <div className="flex flex-col gap-6  w-7/12 mt-10 ">
+          <div className="flex flex-col gap-6 border border-red-500  w-8/12 mt-4 ">
             <h1 className="m-1 text-xl self-center"> Motion Generator</h1>
             {motionFormat == "British Parliamentary" ? (
               <>
@@ -136,8 +136,8 @@ export default function generate() {
               </>
             )}
 
-            <div className="flex  gap-2 ">
-              <div className="w-5/12">
+            <div className="flex flex-col items-center lg:flex-row gap-2 ">
+              <div className="">
                 <h5> Format</h5>
 
                 <Select
@@ -161,7 +161,7 @@ export default function generate() {
                 </Select>
               </div>
 
-              <dix className="w-6/12">
+              <dix className="">
                 <h5> Theme</h5>
                 <Select name="motionTheme" defaultValue="Any">
                   <SelectTrigger className="w-[180px]">
@@ -186,7 +186,7 @@ export default function generate() {
                   </SelectContent>
                 </Select>
               </dix>
-              <div className="w-1/3">
+              <div className="">
                 <h5> Difficulty</h5>
                 <Select name="motionDifficulty" defaultValue="Any">
                   <SelectTrigger className="w-[180px]">
@@ -200,7 +200,7 @@ export default function generate() {
                   </SelectContent>
                 </Select>
               </div>
-              <div className="w-1/2">
+              <div className="">
                 <h5> Database</h5>
                 <Select name="motionDatabase" defaultValue="Hello Motions">
                   <SelectTrigger className="w-[180px]">
@@ -222,6 +222,6 @@ export default function generate() {
           </div>
         </form>
       </main>
-    </main>
+    </>
   );
 }
