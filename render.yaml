@@ -16,5 +16,5 @@ services:
 
 databases:
   - name: motionbot
-    databaseName: aaron-data-bank
+    databaseName: aaron_data_bank
     user: catsnaxx
