@@ -29,3 +29,9 @@ nav{
     @apply p-2 border-gray-400 rounded-lg
 }
 
+@layer base {
+  :root {
+        --radius: 0.5rem
+    }
+}
+
