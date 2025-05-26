@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-@1m-9ym5p^grrtfc=5sb7+&*2)y8=5&p4mgqxfksh$a&9t4iyo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['motion-bot.onrender.com']
+ALLOWED_HOSTS = ['motionbot.onrender.com']
 
 
 # Application definition
