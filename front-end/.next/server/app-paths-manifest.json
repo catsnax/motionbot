@@ -1,7 +1,5 @@
 {
-  "/page": "app/page.js",
-  "/motion/generate/page": "app/motion/generate/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/motion/add/page": "app/motion/add/page.js",
-  "/training/game/page": "app/training/game/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/signup/page": "app/signup/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
