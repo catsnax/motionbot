@@ -82,7 +82,7 @@ export default function generate() {
     <>
       <main className="flex w-[100vw] lg:w-screen justify-center">
         <form
-          className="border-solid flex flex-col gap-3 items-center rounded-md border-2 w-screen"
+          className="border flex flex-col gap-3 items-center rounded-md w-screen"
           action={handleGenerate}
         >
           <div className="flex flex-col gap-6  w-8/12 mt-4 ">
@@ -136,7 +136,7 @@ export default function generate() {
               </>
             )}
 
-            <div className="flex flex-col items-center lg:flex-row gap-2 ">
+            <div className="flex flex-col items-center lg:flex-row gap-2 justify-center ">
               <div className="">
                 <h5> Format</h5>
 

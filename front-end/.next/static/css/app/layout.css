@@ -618,17 +618,11 @@ video {
 .mt-10 {
   margin-top: 2.5rem;
 }
-.mt-4 {
-  margin-top: 1rem;
-}
-.mt-5 {
-  margin-top: 1.25rem;
-}
-.mt-3 {
-  margin-top: 0.75rem;
-}
 .mt-2 {
   margin-top: 0.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .flex {
   display: flex;
@@ -788,22 +782,6 @@ video {
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-.border-red-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(127 29 29 / var(--tw-border-opacity));
-}
-.border-red-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-border-opacity));
-}
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
@@ -1023,8 +1001,6 @@ nav {
 
 .inputBox {
   border-radius: var(--radius);
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
   padding: 0.5rem;
 }
 
@@ -1308,6 +1284,10 @@ nav {
 }
 
 @media (min-width: 1024px) {
+
+  .lg\:w-\[590px\] {
+    width: 590px;
+  }
 
   .lg\:w-screen {
     width: 100vw;
