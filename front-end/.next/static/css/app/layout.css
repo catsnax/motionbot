@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.jsx","import":"Rubik","arguments":[{"subsets":["latin"]}],"variableName":"rubik"} ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.jsx","import":"Rubik","arguments":[{"subsets":["latin"]}],"variableName":"rubik"} ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /* arabic */
 @font-face {
   font-family: '__Rubik_b539cb';
@@ -684,8 +684,8 @@ video {
 .w-4 {
   width: 1rem;
 }
-.w-6\/12 {
-  width: 50%;
+.w-48 {
+  width: 12rem;
 }
 .w-7\/12 {
   width: 58.333333%;
@@ -704,15 +704,6 @@ video {
 }
 .w-screen {
   width: 100vw;
-}
-.w-64 {
-  width: 16rem;
-}
-.w-48 {
-  width: 12rem;
-}
-.w-4\/12 {
-  width: 33.333333%;
 }
 .min-w-\[8rem\] {
   min-width: 8rem;
@@ -779,25 +770,9 @@ video {
 .border-solid {
   border-style: solid;
 }
-.border-blue-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(147 197 253 / var(--tw-border-opacity));
-}
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-.border-red-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-border-opacity));
-}
-.border-green-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(74 222 128 / var(--tw-border-opacity));
-}
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
@@ -1301,24 +1276,16 @@ nav {
 
 @media (min-width: 1024px) {
 
+  .lg\:w-64 {
+    width: 16rem;
+  }
+
   .lg\:w-\[590px\] {
     width: 590px;
   }
 
   .lg\:w-screen {
     width: 100vw;
-  }
-
-  .lg\:w-64 {
-    width: 16rem;
-  }
-
-  .lg\:w-5\/12 {
-    width: 41.666667%;
-  }
-
-  .lg\:w-10\/12 {
-    width: 83.333333%;
   }
 
   .lg\:flex-row {
