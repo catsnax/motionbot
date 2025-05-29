@@ -1,4 +1,4 @@
-// File: /Users/aaronjustinmacias/Desktop/motionbot/front-end/app/admin/page.jsx
+// File: C:\Users\Aaron\Documents\projects\1\motionbot\front-end\app\admin\page.jsx
 import * as entry from '../../../../app/admin/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

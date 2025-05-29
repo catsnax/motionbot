@@ -1,8 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/motion/generate/page": "app/motion/generate/page.js",
-  "/training/game/page": "app/training/game/page.js",
-  "/training/page": "app/training/page.js",
-  "/signup/page": "app/signup/page.js",
-  "/admin/page": "app/admin/page.js"
+  "/admin/page": "app/admin/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
