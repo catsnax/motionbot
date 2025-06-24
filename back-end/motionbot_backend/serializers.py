@@ -5,7 +5,7 @@ from .models import Accounts, Motions
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Accounts
-        fields = ['id', 'username', 'password', 'email_address']
+        fields = ['id', 'username', 'password', 'email_address', 'verified']
 
 class MotionSerializer(serializers.ModelSerializer):
     class Meta:

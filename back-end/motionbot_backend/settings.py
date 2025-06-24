@@ -57,6 +57,8 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     ]
 
+CORS_ALLOW_ALL_ORIGINS = True  # or customize it more securely for production
+
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',

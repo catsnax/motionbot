@@ -12,3 +12,4 @@ class Accounts(models.Model):
     username = models.CharField(max_length = 200)
     password = models.CharField(max_length = 200)
     email_address = models.CharField(max_length = 200, default = "no email")
+    verified = models.BooleanField(default = False)
