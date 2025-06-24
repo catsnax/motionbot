@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // File: C:\Users\Aaron\Documents\projects\motionbot\front-end\app\page.jsx
+=======
+// File: C:\Users\Aaron\Documents\projects\1\motionbot\front-end\app\page.jsx
+>>>>>>> ca871ab16c1b105669bd67e7e26dd9084ca29bcf
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

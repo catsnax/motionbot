@@ -19,6 +19,9 @@ def account_list(request):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status = status.HTTP_201_CREATED)
+    elif request.method == 'PATCH':
+        print("patch request received")
+        
 
 @api_view(['PUT', 'POST'])
 def motion_action(request):

@@ -25,7 +25,8 @@ export default function page() {
   const [formData, setFormData] = useState({
     username: "",
     email_address: "",
-    password: ""
+    password: "",
+    verified: "false"
 
   })
 
